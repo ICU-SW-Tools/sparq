@@ -4,6 +4,7 @@
 #include <sparq/TimeQ.h>
 #include "NewFSM.h"
 #include <sparq/PODVariant.h>
+#include <cstring>
 
 using namespace sparq;
 
