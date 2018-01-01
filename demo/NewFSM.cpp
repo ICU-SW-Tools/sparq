@@ -4,7 +4,7 @@
 
 #include "NewFSM.h"
 
-namespace CDSF {
+namespace sparq {
     namespace FooBar {
 
         predefineState(FooBarFSM, Running);

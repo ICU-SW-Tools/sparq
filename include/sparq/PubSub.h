@@ -11,7 +11,7 @@
 #include <iostream>
 #include "SafeQ.h"
 
-namespace CDSF {
+namespace sparq {
     // A broadcasting thread safe pub-sub mechanism
     template <class T, bool keepLast = false>
     class PubSub {

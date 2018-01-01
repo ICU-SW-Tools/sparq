@@ -11,7 +11,7 @@
 #include <sys/mman.h>
 #include <unistd.h>
 
-namespace SparQ {
+namespace sparq {
     /**
      * Manages an object as a shared memory implementation.
      */

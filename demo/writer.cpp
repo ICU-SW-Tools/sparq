@@ -4,8 +4,8 @@
 
 #include <cstring>
 #include <iostream>
-#include "IPC/OSPushPullBuffer.h"
-#include "PODVariant.h"
+#include <sparq/IPC/OSPushPullBuffer.h>
+#include <sparq/PODVariant.h>
 #include <type_traits>
 
 struct msg {
@@ -13,13 +13,13 @@ struct msg {
 };
 
 int main (int arg, char *argv[]) {
-    using Event = CDSF::PODVariant<msg>;
+    using Event = sparq::PODVariant<msg>;
     std::cout << "is_pod: " << std::is_pod<Event>::value << "\n";
     std::cout << "is_trivially_constructable: " << std::is_trivially_constructible<Event>::value << "\n";
     std::cout << "has_trivial_copy: " << std::is_trivially_copyable<Event>::value << "\n";
     std::cout << "has_trivial_copy: " << std::is_trivially_copyable<std::string>::value << "\n";
     std::cout << "is_standard_layout: " << std::is_standard_layout<Event>::value << "\n";
-    SparQ::OSPushPullBuffer<Event, 10> buffer;
+    sparq::OSPushPullBuffer<Event, 10> buffer;
     if (!buffer.open("/testbuf2")) return 1;
     Event t;
     msg m;

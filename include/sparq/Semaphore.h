@@ -7,7 +7,7 @@
 
 #include <mutex>
 
-namespace CDSF {
+namespace sparq {
     class Semaphore {
     public:
 //        using duration = std::chrono::time_point<std::steady_clock,

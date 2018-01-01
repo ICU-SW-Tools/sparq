@@ -9,7 +9,7 @@
 #include <iostream>
 #include <string>
 
-namespace SparQ {
+namespace sparq {
    /**
     * Provides an abstraction for an OS semaphore (i.e., one used for IPC, rather than
     * for inter-thread-communication).

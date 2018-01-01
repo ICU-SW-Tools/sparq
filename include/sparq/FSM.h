@@ -7,7 +7,7 @@
 
 #include <type_traits>
 
-namespace CDSF {
+namespace sparq {
     // Adopted from TinyFSM - https://github.com/digint/tinyfsm, MIT License
 
     // We want to use inheritance and polymorphism without necessarily incurring

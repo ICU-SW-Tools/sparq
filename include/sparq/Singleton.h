@@ -4,7 +4,7 @@
 
 #ifndef OLYMPUS_MC_SINGLETON_H
 #define OLYMPUS_MC_SINGLETON_H
-namespace CDSF {
+namespace sparq {
 
     template <typename T>
     class Singleton

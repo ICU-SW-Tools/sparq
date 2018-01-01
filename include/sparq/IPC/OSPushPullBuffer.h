@@ -9,7 +9,7 @@
 #include "OSMutex.h"
 #include "OSSharedMemory.h"
 
-namespace SparQ {
+namespace sparq {
 
     /**
       * This is an IPC push pull buffer, not a thread push pull buffer.

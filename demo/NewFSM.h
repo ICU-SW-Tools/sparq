@@ -6,11 +6,11 @@
 #define OLYMPUS_MC_NEWFSM_H
 
 #include <string>
-#include "ActiveFSM.h"
-#include "PODVariant.h"
-#include "PubSub.h"
+#include "../include/sparq/ActiveFSM.h"
+#include "../include/sparq/PODVariant.h"
+#include "../include/sparq/PubSub.h"
 
-namespace CDSF {
+namespace sparq {
 
     namespace FooBar {
 

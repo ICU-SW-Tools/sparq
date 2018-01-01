@@ -5,7 +5,7 @@
 #ifndef OLYMPUS_MC_PODVARIANT_H
 #define OLYMPUS_MC_PODVARIANT_H
 
-namespace CDSF {
+namespace sparq {
 
 #include <cassert>
 

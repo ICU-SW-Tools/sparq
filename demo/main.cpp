@@ -1,11 +1,11 @@
 #include <iostream>
-#include "ActiveObject.h"
-#include "PubSub.h"
-#include "TimeQ.h"
+#include <sparq/ActiveObject.h>
+#include <sparq/PubSub.h>
+#include <sparq/TimeQ.h>
 #include "NewFSM.h"
-#include "PODVariant.h"
+#include <sparq/PODVariant.h>
 
-using namespace CDSF;
+using namespace sparq;
 
 class TimedQuitter : public ActiveObject<int> {
 public:

@@ -8,7 +8,7 @@
 #include <thread>
 #include <map>
 
-namespace CDSF {
+namespace sparq {
     template <class T, class Func>
     class Broadcaster {
     public:

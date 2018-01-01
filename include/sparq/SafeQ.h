@@ -11,7 +11,7 @@
 #include <mutex>
 #include <condition_variable>
 
-namespace CDSF {
+namespace sparq {
     template <class T>
     class SafeQ {
     public:

@@ -8,7 +8,7 @@
 #include <string>
 #include "OSSemaphore.h"
 
-namespace SparQ {
+namespace sparq {
     /**
       *  For semantic clarity, we also define an OSMutex as a simple
       *  semaphore with different names.  Makes it compatible with
