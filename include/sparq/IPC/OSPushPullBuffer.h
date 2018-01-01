@@ -6,6 +6,7 @@
 #define SPARQ_OSPUSHPULLBUFFER_H
 
 #include <iostream>
+#include <mutex>
 #include "OSMutex.h"
 #include "OSSharedMemory.h"
 

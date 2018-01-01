@@ -15,7 +15,8 @@
     <list default="true" id="a4192947-8c7d-43a4-9a21-3fa90ba88394" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/main.cpp" afterPath="$PROJECT_DIR$/demo/main.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/sparq/IPC/OSPushPullBuffer.h" afterPath="$PROJECT_DIR$/include/sparq/IPC/OSPushPullBuffer.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/sparq/IPC/OSSemaphore.h" afterPath="$PROJECT_DIR$/include/sparq/IPC/OSSemaphore.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +31,7 @@
       <file leaf-file-name="FSM.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/sparq/FSM.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
+            <state relative-caret-position="1296">
               <caret line="72" column="8" lean-forward="false" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
               <folding>
                 <element signature="e#2253#2318#0" expanded="true" />
@@ -42,7 +43,7 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="2268">
               <caret line="126" column="8" lean-forward="false" selection-start-line="126" selection-start-column="8" selection-end-line="126" selection-end-column="8" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -54,8 +55,30 @@
       <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+            <state relative-caret-position="288">
+              <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OSSemaphore.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/sparq/IPC/OSSemaphore.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+              <folding>
+                <element signature="e#102#124#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OSPushPullBuffer.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/sparq/IPC/OSPushPullBuffer.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="846">
+              <caret line="50" column="24" lean-forward="false" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -91,34 +114,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActiveObject.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/sparq/ActiveObject.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" column="21" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Broadcaster.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/sparq/Broadcaster.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1026">
               <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActiveFSM.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/sparq/ActiveFSM.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1638">
-              <caret line="91" column="28" lean-forward="false" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
-              <folding>
-                <element signature="e#4588#4606#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -188,12 +189,14 @@
         <option value="$PROJECT_DIR$/IPC/OSPushPullBuffer.h" />
         <option value="$PROJECT_DIR$/writer.cpp" />
         <option value="$PROJECT_DIR$/demo/writer.cpp" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/include/sparq/IPC/OSMutex.h" />
         <option value="$PROJECT_DIR$/include/sparq/ActiveObject.h" />
         <option value="$PROJECT_DIR$/demo/NewFSM.cpp" />
         <option value="$PROJECT_DIR$/include/sparq/ActiveFSM.h" />
         <option value="$PROJECT_DIR$/demo/main.cpp" />
+        <option value="$PROJECT_DIR$/include/sparq/IPC/OSSemaphore.h" />
+        <option value="$PROJECT_DIR$/include/sparq/IPC/OSPushPullBuffer.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -205,8 +208,8 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="75" />
-    <option name="y" value="38" />
+    <option name="x" value="86" />
+    <option name="y" value="41" />
     <option name="width" value="1375" />
     <option name="height" value="794" />
   </component>
@@ -322,6 +325,7 @@
       <workItem from="1514755282823" duration="3520000" />
       <workItem from="1514822558636" duration="2952000" />
       <workItem from="1514825951654" duration="298000" />
+      <workItem from="1514826319177" duration="299000" />
     </task>
     <task id="LOCAL-00001" summary="Reorganized code for ease of installation.  Still need a massive test &#10;harness.">
       <created>1514824842683</created>
@@ -337,26 +341,33 @@
       <option name="project" value="LOCAL" />
       <updated>1514825661583</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Merge branch 'master' of http://cuscsforge01.smiths.net:7990/scm/sq/sparq&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <created>1514826478611</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1514826478611</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91147000" />
+    <option name="totallyTimeSpent" value="91446000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="75" y="38" width="1375" height="794" extended-state="0" />
+    <frame x="86" y="41" width="1375" height="794" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2930909" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2930909" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4375" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3772791" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39691445" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -378,7 +389,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Reorganized code for ease of installation.  Still need a massive test &#10;harness." />
     <MESSAGE value="Renaming and cleanup." />
-    <option name="LAST_COMMIT_MESSAGE" value="Renaming and cleanup." />
+    <MESSAGE value="Merge branch 'master' of http://cuscsforge01.smiths.net:7990/scm/sq/sparq&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of http://cuscsforge01.smiths.net:7990/scm/sq/sparq&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -532,20 +544,6 @@
     <entry file="file://$PROJECT_DIR$/IPC/OSSemaphore.cpp" />
     <entry file="file://$PROJECT_DIR$/OSSemaphore.h" />
     <entry file="file://$PROJECT_DIR$/Event.h" />
-    <entry file="file://$PROJECT_DIR$/include/sparq/IPC/OSPushPullBuffer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="63" lean-forward="false" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/sparq/IPC/OSSemaphore.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/sparq/IPC/OSSharedMemory.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -660,7 +658,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/include/sparq/FSM.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
+        <state relative-caret-position="1296">
           <caret line="72" column="8" lean-forward="false" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
           <folding>
             <element signature="e#2253#2318#0" expanded="true" />
@@ -670,7 +668,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="2268">
           <caret line="126" column="8" lean-forward="false" selection-start-line="126" selection-start-column="8" selection-end-line="126" selection-end-column="8" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
@@ -678,10 +676,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/include/sparq/IPC/OSSemaphore.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#102#124#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/sparq/IPC/OSPushPullBuffer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="846">
+          <caret line="50" column="24" lean-forward="false" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        <state relative-caret-position="288">
+          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
           <folding />
         </state>
       </provider>

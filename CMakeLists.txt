@@ -22,6 +22,10 @@ target_link_libraries(olympus_mc Threads::Threads)
 
 target_link_libraries(writer Threads::Threads)
 
+if(UNIX AND NOT APPLE)
+    target_link_libraries(writer rt)
+endif()
+
 add_library(sparq INTERFACE)
 
 target_include_directories(sparq INTERFACE

@@ -8,6 +8,7 @@
 #include <semaphore.h>
 #include <iostream>
 #include <string>
+#include <fcntl.h>
 
 namespace sparq {
    /**
