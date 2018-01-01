@@ -2,8 +2,8 @@
 // Created by Samit Basu on 12/27/17.
 //
 
-#ifndef OLYMPUS_MC_FSM_H
-#define OLYMPUS_MC_FSM_H
+#ifndef SPARQ_FSM_H
+#define SPARQ_FSM_H
 
 #include <type_traits>
 
@@ -99,4 +99,4 @@ namespace sparq {
 
 }
 
-#endif //OLYMPUS_MC_FSM_H
+#endif //SPARQ_FSM_H

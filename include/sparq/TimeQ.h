@@ -2,8 +2,8 @@
 // Created by Samit Basu on 12/26/17.
 //
 
-#ifndef OLYMPUS_MC_TIMEQ_H
-#define OLYMPUS_MC_TIMEQ_H
+#ifndef SPARQ_TIMEQ_H
+#define SPARQ_TIMEQ_H
 
 #include <functional>
 #include <chrono>
@@ -101,4 +101,4 @@ namespace sparq {
     };
 }
 
-#endif //OLYMPUS_MC_TIMEQ_H
+#endif //SPARQ_TIMEQ_H

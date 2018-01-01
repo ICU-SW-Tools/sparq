@@ -2,8 +2,8 @@
 // Created by Samit Basu on 12/31/17.
 //
 
-#ifndef OLYMPUS_MC_OSSEMAPHORE_H
-#define OLYMPUS_MC_OSSEMAPHORE_H
+#ifndef SPARQ_OSSEMAPHORE_H
+#define SPARQ_OSSEMAPHORE_H
 
 #include <semaphore.h>
 #include <iostream>
@@ -38,4 +38,4 @@ namespace sparq {
         sem_t *sem;
     };
 }
-#endif //OLYMPUS_MC_OSSEMAPHORE_H
+#endif //SPARQ_OSSEMAPHORE_H

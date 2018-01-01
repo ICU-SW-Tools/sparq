@@ -6,6 +6,9 @@
 
 namespace sparq {
     namespace FooBar {
+        void ringBell() {
+            std::cout << "Ding!\n";
+        }
 
         predefineState(FooBarFSM, Running);
 
@@ -39,7 +42,7 @@ namespace sparq {
             }
 
             onEvent(Stop) {
-                transit<Idle>();
+                transit<Idle>(ringBell);
             }
 
             onEvent(Tic) {

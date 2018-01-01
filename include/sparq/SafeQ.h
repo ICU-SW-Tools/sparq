@@ -2,8 +2,8 @@
 // Created by Samit Basu on 12/17/17.
 //
 
-#ifndef OLYMPUS_MC_SAFEQ_H
-#define OLYMPUS_MC_SAFEQ_H
+#ifndef SPARQ_SAFEQ_H
+#define SPARQ_SAFEQ_H
 
 // A thread safe templated Q
 
@@ -72,4 +72,4 @@ namespace sparq {
 }
 
 
-#endif //OLYMPUS_MC_SAFEQ_H
+#endif //SPARQ_SAFEQ_H

@@ -2,8 +2,8 @@
 // Created by Samit Basu on 12/17/17.
 //
 
-#ifndef OLYMPUS_MC_SINGLETON_H
-#define OLYMPUS_MC_SINGLETON_H
+#ifndef SPARQ_SINGLETON_H
+#define SPARQ_SINGLETON_H
 namespace sparq {
 
     template <typename T>
@@ -24,4 +24,4 @@ namespace sparq {
     };
 }
 
-#endif //OLYMPUS_MC_SINGLETON_H
+#endif //SPARQ_SINGLETON_H

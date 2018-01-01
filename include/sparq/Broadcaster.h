@@ -2,8 +2,8 @@
 // Created by Samit Basu on 12/29/17.
 //
 
-#ifndef OLYMPUS_MC_BROADCASTER_H
-#define OLYMPUS_MC_BROADCASTER_H
+#ifndef SPARQ_BROADCASTER_H
+#define SPARQ_BROADCASTER_H
 
 #include <thread>
 #include <map>
@@ -60,4 +60,4 @@ namespace sparq {
     };
 }
 
-#endif //OLYMPUS_MC_BROADCASTER_H
+#endif //SPARQ_BROADCASTER_H

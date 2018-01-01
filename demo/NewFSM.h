@@ -2,8 +2,8 @@
 // Created by Samit Basu on 12/28/17.
 //
 
-#ifndef OLYMPUS_MC_NEWFSM_H
-#define OLYMPUS_MC_NEWFSM_H
+#ifndef SPARQ_NEWFSM_H
+#define SPARQ_NEWFSM_H
 
 #include <string>
 #include "../include/sparq/ActiveFSM.h"
@@ -47,4 +47,4 @@ namespace sparq {
 }
 
 
-#endif //OLYMPUS_MC_NEWFSM_H
+#endif //SPARQ_NEWFSM_H

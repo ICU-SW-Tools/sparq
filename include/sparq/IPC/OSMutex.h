@@ -2,8 +2,8 @@
 // Created by Samit Basu on 12/31/17.
 //
 
-#ifndef OLYMPUS_MC_OSMUTEX_H
-#define OLYMPUS_MC_OSMUTEX_H
+#ifndef SPARQ_OSMUTEX_H
+#define SPARQ_OSMUTEX_H
 
 #include <string>
 #include "OSSemaphore.h"
@@ -29,4 +29,4 @@ namespace sparq {
 
 }
 
-#endif //OLYMPUS_MC_OSMUTEX_H
+#endif //SPARQ_OSMUTEX_H

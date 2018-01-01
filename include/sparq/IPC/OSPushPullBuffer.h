@@ -2,8 +2,8 @@
 // Created by Samit Basu on 12/31/17.
 //
 
-#ifndef OLYMPUS_MC_OSPUSHPULLBUFFER_H
-#define OLYMPUS_MC_OSPUSHPULLBUFFER_H
+#ifndef SPARQ_OSPUSHPULLBUFFER_H
+#define SPARQ_OSPUSHPULLBUFFER_H
 
 #include <iostream>
 #include "OSMutex.h"
@@ -70,4 +70,4 @@ namespace sparq {
 
 }
 
-#endif //OLYMPUS_MC_OSPUSHPULLBUFFER_H
+#endif //SPARQ_OSPUSHPULLBUFFER_H

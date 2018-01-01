@@ -2,8 +2,8 @@
 // Created by Samit Basu on 12/17/17.
 //
 
-#ifndef OLYMPUS_MC_PUBSUB_H_H
-#define OLYMPUS_MC_PUBSUB_H_H
+#ifndef SPARQ_PUBSUB_H_H
+#define SPARQ_PUBSUB_H_H
 
 #include <set>
 #include <thread>
@@ -79,4 +79,4 @@ namespace sparq {
     };
 }
 
-#endif //OLYMPUS_MC_PUBSUB_H_H
+#endif //SPARQ_PUBSUB_H_H

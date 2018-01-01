@@ -2,8 +2,8 @@
 // Created by Samit Basu on 12/31/17.
 //
 
-#ifndef OLYMPUS_MC_OSSHAREDMEMORY_H
-#define OLYMPUS_MC_OSSHAREDMEMORY_H
+#ifndef SPARQ_OSSHAREDMEMORY_H
+#define SPARQ_OSSHAREDMEMORY_H
 
 #include <iostream>
 #include <string>
@@ -51,4 +51,4 @@ namespace sparq {
 
 
 }
-#endif //OLYMPUS_MC_OSSHAREDMEMORY_H
+#endif //SPARQ_OSSHAREDMEMORY_H

@@ -2,8 +2,8 @@
 // Created by Samit Basu on 12/17/17.
 //
 
-#ifndef OLYMPUS_MC_SEMAPHORE_H
-#define OLYMPUS_MC_SEMAPHORE_H
+#ifndef SPARQ_SEMAPHORE_H
+#define SPARQ_SEMAPHORE_H
 
 #include <mutex>
 
@@ -42,4 +42,4 @@ namespace sparq {
     };
 }
 
-#endif //OLYMPUS_MC_SEMAPHORE_H
+#endif //SPARQ_SEMAPHORE_H

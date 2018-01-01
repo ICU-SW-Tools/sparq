@@ -2,8 +2,8 @@
 // Created by Samit Basu on 12/30/17.
 //
 
-#ifndef OLYMPUS_MC_PODVARIANT_H
-#define OLYMPUS_MC_PODVARIANT_H
+#ifndef SPARQ_PODVARIANT_H
+#define SPARQ_PODVARIANT_H
 
 namespace sparq {
 
@@ -181,4 +181,4 @@ namespace sparq {
 
 }
 
-#endif //OLYMPUS_MC_TUNION_H
+#endif //SPARQ_TUNION_H
