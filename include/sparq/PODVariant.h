@@ -5,9 +5,10 @@
 #ifndef SPARQ_PODVARIANT_H
 #define SPARQ_PODVARIANT_H
 
-namespace sparq {
-
+#include <type_traits>
 #include <cassert>
+
+namespace sparq {
 
     /**
      * What we want is the std::variant type.  But this comes at some significant cost, either

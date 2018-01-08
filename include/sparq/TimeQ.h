@@ -71,11 +71,11 @@ namespace sparq {
         }
         timepoint_t next() const {
             auto micros = std::chrono::duration_cast<std::chrono::microseconds>(baseQ::top().when - Clock::now()).count();
-            std::cout << "Next timer expires " << micros << " from now\n";
+            //std::cout << "Next timer expires " << micros << " from now\n";
             return baseQ::top().when;
         }
         bool cancel(timerid_t id) {
-            std::cout << "cancel: timers in list: " << this->c.size() << "\n";
+            //std::cout << "cancel: timers in list: " << this->c.size() << "\n";
             for (auto &t : this->c) {
                 if (t.id == id) {
                     t.id = 0;
@@ -90,7 +90,7 @@ namespace sparq {
         void update() {
             while ((!this->empty()) && (this->next() <= Clock::now())) {
                 if (this->top().id && this->top().callback) {
-                    std::cout << "Processing callback of timer " << this->top().id << "\n";
+//                    std::cout << "Processing callback of timer " << this->top().id << "\n";
                     this->top().callback();
                 }
                 this->pop();
@@ -99,6 +99,10 @@ namespace sparq {
     protected:
         timerid_t counter = 1;
     };
+
+    inline uint64_t operator "" _sec(unsigned long long t) {return t*1000*1000;}
+    inline uint64_t operator "" _msec(unsigned long long t) {return t*1000;}
+    inline uint64_t operator "" _usec(unsigned long long t) {return t;}
 }
 
 #endif //SPARQ_TIMEQ_H

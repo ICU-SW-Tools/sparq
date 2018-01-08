@@ -94,6 +94,9 @@ namespace sparq {
     };
 */
 
+    template <typename ... Ts>
+    using EventT = PODVariant<Ts ...>;
+
     // Adopted from TinyFSM - https://github.com/digint/tinyfsm, MIT License
 
     // We want to use inheritance and polymorphism without necessarily incurring
@@ -142,13 +145,14 @@ namespace sparq {
         static void run() {
             while (!self.quit) {
                 if (self.timers.empty()) {
-                    std::cout << "TimerQ empty: waiting forever\n";
-                    self.current_state->react(self.event_Q.pop());
+//                    std::cout << "TimerQ empty: waiting forever\n";
+                    auto obj = self.event_Q.pop();
+                    self.current_state->react(obj);
                 } else {
                     EventType obj;
-                    std::cout << "Waiting until next timer expires " << self.timers.top() << "\n";
+//                    std::cout << "Waiting until next timer expires " << self.timers.top() << "\n";
                     bool msg = self.event_Q.tryPopUntil(&obj,self.timers.next());
-                    std::cout << "Got message or timeout expired\n";
+//                    std::cout << "Got message or timeout expired\n";
                     self.timers.update();
                     if (msg)
                         self.current_state->react(obj);
@@ -208,13 +212,11 @@ namespace sparq {
             return self.timers.cancel(id);
         }
 
-
-
     public:
         static void initialize();
 
         static void push(const EventType &event) {
-            std::cout << "Pushed event " << typeid(event).name() << " to " << __PRETTY_FUNCTION__ << "\n";
+            //std::cout << "Pushed event " << typeid(event).name() << " to " << __PRETTY_FUNCTION__ << "\n";
             self.event_Q.push(event);
         }
 
@@ -237,18 +239,23 @@ namespace sparq {
 
 
 #define AFSM_INITIAL_STATE(_FSM, _EVENT, _STATE) \
+    namespace sparq { \
     template<> void AFSM<_FSM, _EVENT>::initialize() { \
-     enter<_STATE>(); \
+        enter<_STATE>(); \
+      } \
     }
 
-    // Syntactic sugar
-#define defineActiveFSM(name,event) struct name : public AFSM<name, event>
+
+// Syntactic sugar
+#define defineActiveFSM(name,event) struct name : public sparq::AFSM<name, event>
 #define defaultEventHandler(x) virtual void operator()(const x& event)
 #define onEvent(x) virtual void operator()(const x& event) override
 #define onEntry() virtual void entry() override
 #define onExit() virtual void exit() override
 #define defineState(fsm,substate) struct substate : public fsm
 #define predefineState(fsm,substate) struct substate
+#define implementEventHandler(name,x) void name::operator()(const x& event)
+#define mapEventToState(name,event,state) void name::operator()(const event&) {std::cout << "Got Event " << #event << " -> " << #state << "\n"; transit<state>();}
 }
 
 #endif //SPARQ_ACTIVEFSM_H

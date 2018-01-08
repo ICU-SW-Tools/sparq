@@ -20,7 +20,7 @@ namespace sparq {
       * @tparam T
       * @tparam element_count
       */
-    template <class T, int element_count>
+    template <class T, int element_count, bool lossy = false>
     class OSPushPullBuffer {
         // FIXME - is there an issue with zero filling the shared memory segment on creation?
         static_assert(std::is_trivially_copyable<T>::value, "only trivially copyable types are supported in shared memory");
@@ -37,34 +37,34 @@ namespace sparq {
 
     public:
         bool open(const std::string &name) {
-            if (!freecount.open(name+".freecount",element_count)) return false;
+            std::cerr << "Starting Buffer open " << name << "\n";
+            if (!lossy && !freecount.open(name+".freecount",element_count)) return false;
             if (!usedcount.open(name+".usedcount",0)) return false;
             if (!writermutex.open(name+".writerlock")) return false;
             if (!readermutex.open(name+".readerlock")) return false;
             if (!memory.open(name+".buffer")) return false;
+            std::cerr << "Buffer open successful\n";
             return true;
         }
         void push(const T& elem) {
-            std::cout << "Waiting for free block\n";
-            freecount.wait();
-            std::cout << "Getting writer mutex\n";
+            if (!lossy) freecount.wait();
             std::lock_guard<OSMutex> guard(writermutex);
             auto ptr = memory.get();
             ptr->data[ptr->writer_index] = elem;
             ptr->writer_index = (ptr->writer_index + 1) % element_count;
-            std::cout << "Signaling used block\n";
             usedcount.notify();
         }
         T pop() {
-            std::cout << "Waiting for used block\n";
+            std::cerr << "Pop issued\n";
             usedcount.wait();
-            std::cout << "Getting reader mutex\n";
+            std::cerr << "Used count is valid\n";
             std::lock_guard<OSMutex> guard(readermutex);
+            std::cerr << "Reader mutex locked\n";
             auto ptr = memory.get();
+            std::cerr << "Reader_index = " << ptr->reader_index << "\n";
             T ret = ptr->data[ptr->reader_index];
             ptr->reader_index = (ptr->reader_index + 1) % element_count;
-            std::cout << "Signalling free block\n";
-            freecount.notify();
+            if (!lossy) freecount.notify();
             return ret;
         }
     };

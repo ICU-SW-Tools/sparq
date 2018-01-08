@@ -60,5 +60,6 @@ namespace sparq {
 
     PubSub<std::string> FooBar::FooBarFSM::myState;
 
-    AFSM_INITIAL_STATE(FooBar::FooBarFSM, FooBar::Event, FooBar::Idle);
 }
+
+AFSM_INITIAL_STATE(FooBar::FooBarFSM, FooBar::Event, FooBar::Idle);

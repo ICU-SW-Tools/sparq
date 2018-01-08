@@ -22,7 +22,7 @@ namespace sparq {
 
         struct Tic {};
 
-        typedef PODVariant<Start, Stop, Quit, Tic> Event;
+        using Event = EventT<Start, Stop, Quit, Tic>;
 
         // This is the finite state machine - simple start stop
         defineActiveFSM(FooBarFSM, Event) {

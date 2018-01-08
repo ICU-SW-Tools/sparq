@@ -61,10 +61,10 @@ namespace sparq {
             while (!quit) {
                 T obj;
                 auto msgAvail = this->msgQ.tryPop(&obj);
-                std::cout << "Msg Avail: " << obj << " flag: " << msgAvail << "\n";
+                //std::cout << "Msg Avail: " << obj << " flag: " << msgAvail << "\n";
                 if (msgAvail) {
                     for (auto t : this->listeners) {
-                        std::cout << "Sending msg " << obj << " to listener " << t.first << "\n";
+                        //std::cout << "Sending msg " << obj << " to listener " << t.first << "\n";
                         t.second(obj);
                     }
                     if (keepLast) {
@@ -72,7 +72,7 @@ namespace sparq {
                     }
                 }
             }
-            std::cout << "Shutting down pubsub";
+            //std::cout << "Shutting down pubsub";
             listeners.clear();
             cv.notify_all();
         }
