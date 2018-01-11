@@ -137,9 +137,9 @@ namespace sparq {
         template<typename S>
         static void enter() {
             self.quit = false;
-            self.t1 = new std::thread(&AFSM::run);
             self.current_state = state_ptr<S>();
             self.current_state->entry();
+            self.t1 = new std::thread(&AFSM::run);
         }
 
         static void run() {
