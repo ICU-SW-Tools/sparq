@@ -12,6 +12,10 @@
 #include "PODVariant.h"
 #include <type_traits>
 
+#ifdef SPARQ_DEBUG
+#include <syslog.h>
+#endif
+
 namespace sparq {
     /*
      * An Active FSM couples two paradigms together.  One is an active object, which is a thread that owns
@@ -145,26 +149,24 @@ namespace sparq {
         static void run() {
             while (!self.quit) {
                 if (self.timers.empty()) {
-//                    std::cout << "TimerQ empty: waiting forever\n";
                     auto obj = self.event_Q.pop();
                     self.current_state->react(obj);
                 } else {
                     EventType obj;
-//                    std::cout << "Waiting until next timer expires " << self.timers.top() << "\n";
                     bool msg = self.event_Q.tryPopUntil(&obj,self.timers.next());
-//                    std::cout << "Got message or timeout expired\n";
                     self.timers.update();
                     if (msg)
                         self.current_state->react(obj);
                 }
             }
-            std::cout << "Object quit detected";
         }
 
     protected:
         virtual void entry() {};
 
         virtual void exit() {};
+
+        virtual std::string name() {return "";}
 
         static void signal_quit() {
             self.quit = true;
@@ -179,7 +181,15 @@ namespace sparq {
         template<typename S>
         void transit() {
             self.current_state->exit();
+#ifdef SPARQ_DEBUG
+            if (!self.current_state->name().empty())
+              syslog(LOG_DEBUG,"-%s",self.current_state->name().c_str());
+#endif
             self.current_state = state_ptr<S>();
+#ifdef SPARQ_DEBUG
+            if (!self.current_state->name().empty())
+              syslog(LOG_DEBUG,"+%s",self.current_state->name().c_str());
+#endif
             self.current_state->entry();
         }
 
@@ -256,6 +266,7 @@ namespace sparq {
 #define predefineState(fsm,substate) struct substate
 #define implementEventHandler(name,x) void name::operator()(const x& event)
 #define mapEventToState(name,event,state) void name::operator()(const event&) {std::cout << "Got Event " << #event << " -> " << #state << "\n"; transit<state>();}
+#define debugName(str) virtual std::string name() override {return str;}
 }
 
 #endif //SPARQ_ACTIVEFSM_H
