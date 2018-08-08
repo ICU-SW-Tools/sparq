@@ -20,7 +20,7 @@ namespace sparq {
     public:
         static_assert(std::is_trivially_copyable<T>::value, "non-trivially copyable types not supported in shared memory");
         bool open(const std::string &name) {
-            fd_shm = shm_open(name.c_str(), O_RDWR | O_CREAT , 0x660);
+            fd_shm = shm_open(name.c_str(), O_RDWR | O_CREAT , S_IRWXU);
             std::cout << "Open of " << name << " status " << (fd_shm != -1) << "\n";
             if (fd_shm == -1) {
                 perror("open");

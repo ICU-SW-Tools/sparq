@@ -18,7 +18,7 @@ namespace sparq {
     class OSSemaphore {
     public:
         bool open(const std::string &name, int initial_value = 0) {
-            sem = sem_open(name.c_str(), O_CREAT, 0660, initial_value);
+            sem = sem_open(name.c_str(), O_CREAT, 0666, initial_value);
             std::cerr << "Open of " << name << " condition: " << (sem != SEM_FAILED) << "\n";
             return (sem != SEM_FAILED);
         }
