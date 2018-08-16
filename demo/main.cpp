@@ -205,52 +205,52 @@ int main() {
     thing.push(FooBar::Stop());
 
     Sample::initialize();
-    auto start = std::chrono::high_resolution_clock::now();
+    auto start = std::chrono::steady_clock::now();
     for (int i=0;i<100000000;i++) {
         Sample::dispatch(EventMsg(eventID::Go));
         Sample::dispatch(EventMsg(eventID::Stop));
     }
-    auto elapsed = std::chrono::high_resolution_clock::now() - start;
+    auto elapsed = std::chrono::steady_clock::now() - start;
     std::cout << "Elapsed time for 100e6 runs: " << std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count() << " usec\n";
 
-    start = std::chrono::high_resolution_clock::now();
+    start = std::chrono::steady_clock::now();
     for (int i=0;i<100000000;i++) {
         Sample::dispatch(GoMsg(32));
         Sample::dispatch(EventMsg(eventID::Stop));
     }
-    elapsed = std::chrono::high_resolution_clock::now() - start;
+    elapsed = std::chrono::steady_clock::now() - start;
     std::cout << "Elapsed time for 100e6 runs: " << std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count() << " usec\n";
 
-    start = std::chrono::high_resolution_clock::now();
+    start = std::chrono::steady_clock::now();
     auto e_go = new go(32);
     auto e_stop = new stop();
     for (int i=0;i<100000000;i++) {
         Sample::dispatch(e_go);
         Sample::dispatch(e_stop);
     }
-    elapsed = std::chrono::high_resolution_clock::now() - start;
+    elapsed = std::chrono::steady_clock::now() - start;
     std::cout << "Elapsed time for 100e6 runs: " << std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count() << " usec\n";
 */
     /*
     Elevator::initialize();
-    start = std::chrono::high_resolution_clock::now();
+    start = std::chrono::steady_clock::now();
     for (int i=0;i<100000000;i++) {
         Elevator::dispatch(Go());
         Elevator::dispatch(Stop());
     }
-    elapsed = std::chrono::high_resolution_clock::now() - start;
+    elapsed = std::chrono::steady_clock::now() - start;
     std::cout << "Elapsed time for 100e6 runs: " << std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count() << " usec\n";
     std::cout << "Elevator run count: " << Elevator::run_count << "\n";
     Widget w;
     w.initialize();
-    start = std::chrono::high_resolution_clock::now();
+    start = std::chrono::steady_clock::now();
     DGo go;
     DStop stop;
     for (int i=0;i<100000000;i++) {
         go.apply(&w);
         stop.apply(&w);
     }
-    elapsed = std::chrono::high_resolution_clock::now() - start;
+    elapsed = std::chrono::steady_clock::now() - start;
     std::cout << "Elapsed time for 100e6 runs: " << std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count() << " usec\n";
     std::cout << "Elevator run count: " << w.counter << "\n";
     auto e = Go();

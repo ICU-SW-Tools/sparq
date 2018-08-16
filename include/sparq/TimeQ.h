@@ -13,7 +13,7 @@
 namespace sparq {
     // Provides a priority Q for time stamps.
     using callback_t = std::function<void()>;
-    using Clock = std::chrono::high_resolution_clock;
+    using Clock = std::chrono::steady_clock;
     using timepoint_t = Clock::time_point;
 
     template <typename V, typename R>
