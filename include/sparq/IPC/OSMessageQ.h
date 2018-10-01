@@ -54,6 +54,10 @@ namespace sparq {
             int ret = mq_timedsend(fd, (const char*)(&val), sizeof(T), priority, &tm);
             return (ret == 0);
         }
+        bool close() {
+            auto result = mq_close(fd);
+            return (result > 0);
+        }
     };
 
 }

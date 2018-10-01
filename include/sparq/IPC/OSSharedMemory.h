@@ -20,6 +20,7 @@ namespace sparq {
     public:
         static_assert(std::is_trivially_copyable<T>::value, "non-trivially copyable types not supported in shared memory");
         bool open(const std::string &name) {
+            if (ptr) return true;
             fd_shm = shm_open(name.c_str(), O_RDWR | O_CREAT , S_IRWXU);
             std::cout << "Open of " << name << " status " << (fd_shm != -1) << "\n";
             if (fd_shm == -1) {
@@ -32,7 +33,7 @@ namespace sparq {
             if (ptr == MAP_FAILED) {
                 std::cout << "Memory map failed\n";
                 perror("mmap");
-                close(fd_shm);
+                ::close(fd_shm);
                 return false;
             }
             return true;
@@ -41,12 +42,18 @@ namespace sparq {
             return ptr;
         }
         ~OSSharedMemory() {
+            if(!ptr) return;
             munmap(ptr, sizeof(T));
-            close(fd_shm);
+            ::close(fd_shm);
+        }
+        void close(){
+            munmap(ptr, sizeof(T));
+            ::close(fd_shm);
+            ptr = nullptr;
         }
     private:
-        int fd_shm;
-        T* ptr;
+        int fd_shm = -1;
+        T* ptr = nullptr;
     };
 
 
