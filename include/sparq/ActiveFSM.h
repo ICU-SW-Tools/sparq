@@ -5,12 +5,12 @@
 #ifndef SPARQ_ACTIVEFSM_H
 #define SPARQ_ACTIVEFSM_H
 
-#include "ActiveObject.h"
 #include "FSM.h"
 #include "SafeQ.h"
 #include "TimeQ.h"
 #include "PODVariant.h"
 #include <type_traits>
+#include <thread>
 
 #ifdef SPARQ_DEBUG
 #include <syslog.h>

@@ -6,7 +6,7 @@ find_package(Threads REQUIRED)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(HEADER_FILES include/sparq/SafeQ.h include/sparq/ActiveObject.h include/sparq/Singleton.h include/sparq/PubSub.h include/sparq/Semaphore.h include/sparq/TimeQ.h include/sparq/FSM.h
+set(HEADER_FILES include/sparq/SafeQ.h include/sparq/Singleton.h include/sparq/PubSub.h include/sparq/Semaphore.h include/sparq/TimeQ.h include/sparq/FSM.h
         include/sparq/ActiveFSM.h include/sparq/Broadcaster.h include/sparq/PODVariant.h include/sparq/IPC/OSSemaphore.h include/sparq/IPC/OSMutex.h
         include/sparq/IPC/OSPushPullBuffer.h include/sparq/IPC/OSSharedMemory.h include/sparq/IPC/OSMessageQ.h)
 
