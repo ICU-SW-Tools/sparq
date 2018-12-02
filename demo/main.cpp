@@ -1,5 +1,4 @@
 #include <iostream>
-#include <sparq/ActiveObject.h>
 #include <sparq/PubSub.h>
 #include <sparq/TimeQ.h>
 #include "NewFSM.h"
@@ -7,43 +6,6 @@
 #include <cstring>
 
 using namespace sparq;
-
-class TimedQuitter : public ActiveObject<int> {
-public:
-    TimedQuitter() {
-        this->push(0);
-    }
-    void foo() {
-        std::cout << "FOO\n";
-    }
-    bool process(const int &t) {
-        std::cout << "Got Message " << t << "\n";
-        switch (t) {
-            case 0: // Startup message;
-                this->addTimer(1e6, 1);
-                break;
-            case 1:
-                this->addTimer(1e4, 2);
-                break;
-            case 2:
-                this->addTimer(1e3, std::bind(&TimedQuitter::foo, this));
-                this->addTimer(1e4, 4);
-                break;
-            case 4: // Shutdown message;
-                return false;
-        }
-        return true;
-    }
-};
-
-
-class Quitter : public ActiveObject<int> {
-public:
-    bool process(const int &p) {
-        std::cout << "Got Message " << p << "! Quitting" << std::endl;
-        return false;
-    }
-};
 
 void foo(int t) {
     std::cout << "Foo says " << t << "\n";
@@ -257,11 +219,6 @@ int main() {
     std::cout << "Size of " << sizeof(e) << " Go\n";
 */
 
-    Quitter q;
-    std::cout << "Hello, World!" << std::endl;
-    std::this_thread::sleep_for(std::chrono::seconds(1));
-    q.push(5);
-    std::this_thread::sleep_for(std::chrono::seconds(1));
     PubSub<int> comm;
     comm.subscribe("foo",foo);
     comm.subscribe("goo",goo);
@@ -274,9 +231,6 @@ int main() {
     comm.publish(1);
     std::this_thread::sleep_for(std::chrono::seconds(1));
     comm.stop();
-
-    TimedQuitter s;
-    s.join();
 
     TimeQ t;
     const int ms = 1000;
