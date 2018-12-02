@@ -8,6 +8,7 @@
 #include <set>
 #include <thread>
 #include <map>
+#include <functional>
 #include <iostream>
 #include "SafeQ.h"
 
